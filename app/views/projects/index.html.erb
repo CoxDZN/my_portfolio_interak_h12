@@ -1,2 +1,19 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<%= link_to 'New Project', new_project_path %>
+
+<ul class="projects">
+
+ <% @projects.each do |project| %>
+ 
+ 	<li class="project">
+ 		
+		<%= link_to project.name, project %>
+		(
+		 <%= link_to 'Edit', edit_project_path(project) %> |
+		<%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+		)
+
+ 	</li>
+
+ <% end %>
+
+</ul>
