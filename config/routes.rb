@@ -2,7 +2,11 @@ CoxdznPortfolio::Application.routes.draw do
 
   resources :clients
 
-  resources :projects
+  resources :projects do |project|
+
+    resources :images
+
+  end
   
   root 'clients#index'
 
