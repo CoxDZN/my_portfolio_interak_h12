@@ -51,3 +51,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'carrierwave-ftp', :require => 'carrierwave/storage/ftp/all' # both FTP/SFTP
+
+gem "fog", "~> 1.3.1"
